@@ -1,0 +1,33 @@
+POMYSŁ: APLIKACJA / STRONA Z KODAMI QR DLA BREŃ GARDEN
+
+Najprostszy model:
+- Przy roślinie, ptaku, rzeźbie albo alejce wisi mała tabliczka z kodem QR.
+- QR prowadzi do strony np. /qr/trawa-miskant.html albo /qr/bazant-zloty.html.
+- Na stronie jest:
+  1. nazwa,
+  2. zdjęcie,
+  3. krótki opis dla dorosłych,
+  4. wersja prostym językiem dla dzieci,
+  5. ciekawostka,
+  6. przycisk „Odtwórz lektora”.
+
+Wariant tani:
+- statyczna strona HTML/PWA,
+- opisy zapisane w plikach JSON,
+- audio jako gotowe pliki MP3 wygenerowane wcześniej przez lektora AI,
+- działa szybko i tanio, bez stałego generowania głosu.
+
+Wariant bardziej rozbudowany:
+- panel administratora,
+- baza Firebase,
+- dodawanie nowych roślin/ptaków z telefonu,
+- generowanie kodów QR,
+- opcja kilku języków,
+- statystyki skanowania.
+
+Najlepszy start:
+Zrobić najpierw 20 punktów QR:
+- 10 roślin/traw,
+- 5 ptaków,
+- 3 miejsca foto,
+- 2 ciekawostki o ogrodzie.
