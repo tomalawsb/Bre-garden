@@ -1,0 +1,18 @@
+[
+  {
+    "id": "rabata-kwiatowa-demo",
+    "title": "Rabata kwiatowa",
+    "category": "roślina",
+    "shortDescription": "Przykładowy punkt QR dla rabaty kwiatowej.",
+    "audio": "assets/audio/rabata-kwiatowa.mp3",
+    "image": "assets/img/kwiaty-rozowe.webp"
+  },
+  {
+    "id": "ptactwo-ozdobne-demo",
+    "title": "Ptactwo ozdobne",
+    "category": "ptak",
+    "shortDescription": "Tu można dodać kartę kury ozdobnej, bażanta albo innego ptaka.",
+    "audio": "assets/audio/ptactwo-ozdobne.mp3",
+    "image": "assets/img/plac-zabaw-tipi.webp"
+  }
+]

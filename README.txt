@@ -1,22 +1,35 @@
-BREŃ GARDEN — strona HTML
+BREŃ GARDEN — STRONA STATYCZNA PREMIUM
 
-Zawartość:
-- index.html — gotowa strona typu landing page
-- css/style.css — wygląd strony
-- js/app.js — menu mobilne i podgląd zdjęć
-- assets/img/ — zoptymalizowane zdjęcia WebP
-- assets/logo.svg — proste logo tymczasowe
+To jest gotowa strona HTML/CSS/JS przygotowana pod GitHub Pages.
+Nie wymaga WordPressa, PHP ani bazy danych.
 
-Jak uruchomić:
+JAK OPUBLIKOWAĆ NA GITHUB PAGES:
 1. Rozpakuj ZIP.
-2. Otwórz plik index.html w przeglądarce.
+2. Wejdź do rozpakowanego folderu.
+3. Wrzuć CAŁĄ zawartość folderu do repozytorium GitHub.
+   Ważne: plik index.html ma być w głównym katalogu repozytorium.
+4. W GitHub wejdź w Settings -> Pages.
+5. Ustaw Source: Deploy from a branch.
+6. Wybierz Branch: main oraz Folder: /root.
+7. Zapisz i poczekaj kilka minut.
+8. Link będzie zwykle taki:
+   https://twoj-login.github.io/nazwa-repozytorium/
 
-Co podmienić przed publikacją:
-1. Kontakt: w index.html znajdź sekcję id="kontakt".
-2. E-mail: zmień kontakt@bren-garden.pl na właściwy adres.
-3. Telefon: jeżeli ma być widoczny, dodaj go w sekcji kontaktu.
-4. Zdjęcia: można podmienić pliki w assets/img/ lub dodać nowe karty w sekcji Galeria.
-5. Cennik/godziny: na razie celowo nie wpisano wymyślonych cen ani godzin.
+CO UZUPEŁNIĆ PRZED PUBLIKACJĄ:
+- numer telefonu,
+- godziny otwarcia,
+- cennik,
+- zasady wejścia,
+- regulamin sesji zdjęciowych,
+- dokładny link do Messengera/Facebooka,
+- ewentualnie własną domenę.
 
-Użyte zdjęcia:
-Strona korzysta ze zdjęć przekazanych w rozmowie, nie z automatycznie pobranych zdjęć z Facebooka.
+GDZIE EDYTOWAĆ TREŚCI:
+- index.html — główne teksty, oferta, kontakt,
+- przewodnik-qr.html — przykładowa karta QR,
+- css/style.css — wygląd,
+- js/app.js — galeria i proste interakcje,
+- assets/img — zdjęcia.
+
+UWAGA:
+Strona korzysta ze zdjęć przekazanych w rozmowie. Dodatkowe zdjęcia z Facebooka najlepiej pobrać ręcznie od właściciela profilu i podmienić/dodać w folderze assets/img.
