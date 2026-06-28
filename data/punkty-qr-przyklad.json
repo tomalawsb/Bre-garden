@@ -1,0 +1,23 @@
+[
+  {
+    "id": "rozplenica-japonska",
+    "name": "Rozplenica japońska",
+    "category": "Rośliny",
+    "url": "./przewodnik-qr.html#rozplenica-japonska",
+    "audio": "audio/rozplenica-japonska.mp3"
+  },
+  {
+    "id": "bazant-zloty",
+    "name": "Bażant złocisty",
+    "category": "Ptactwo",
+    "url": "./przewodnik-qr.html#bazant-zloty",
+    "audio": "audio/bazant-zloty.mp3"
+  },
+  {
+    "id": "bialy-most",
+    "name": "Biały most",
+    "category": "Punkt foto",
+    "url": "./przewodnik-qr.html#bialy-most",
+    "audio": "audio/bialy-most.mp3"
+  }
+]

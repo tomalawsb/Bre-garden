@@ -1,52 +1,37 @@
-const toggle = document.querySelector(".nav-toggle");
-const links = document.querySelector(".nav-links");
-const year = document.querySelector("#year");
-const lightbox = document.querySelector(".lightbox");
-const lightboxImg = document.querySelector(".lightbox img");
-const closeBtn = document.querySelector(".lightbox-close");
 
-if (year) year.textContent = new Date().getFullYear();
+const header = document.querySelector('[data-header]');
+const navToggle = document.querySelector('[data-nav-toggle]');
+const nav = document.querySelector('[data-nav]');
 
-if (toggle && links) {
-  toggle.addEventListener("click", () => {
-    const open = links.classList.toggle("is-open");
-    toggle.setAttribute("aria-expanded", String(open));
+window.addEventListener('scroll', () => {
+  header?.classList.toggle('is-scrolled', window.scrollY > 12);
+});
+
+navToggle?.addEventListener('click', () => {
+  const open = nav?.classList.toggle('is-open');
+  navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+});
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('is-visible');
   });
+}, { threshold: 0.12 });
 
-  links.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      links.classList.remove("is-open");
-      toggle.setAttribute("aria-expanded", "false");
-    });
-  });
-}
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-document.querySelectorAll(".lightbox-link").forEach((link) => {
-  link.addEventListener("click", (event) => {
-    event.preventDefault();
-    const img = link.querySelector("img");
-    lightboxImg.src = link.href;
-    lightboxImg.alt = img ? img.alt : "Zdjęcie z galerii Breń Garden";
+const lightbox = document.querySelector('[data-lightbox]');
+const lightboxImg = lightbox?.querySelector('img');
+const close = document.querySelector('[data-lightbox-close]');
+
+document.querySelectorAll('.gallery-item img').forEach(img => {
+  img.parentElement.addEventListener('click', () => {
+    if (!lightbox || !lightboxImg) return;
+    lightboxImg.src = img.dataset.full || img.src;
+    lightboxImg.alt = img.alt || '';
     lightbox.hidden = false;
-    document.body.style.overflow = "hidden";
   });
 });
 
-function closeLightbox() {
-  lightbox.hidden = true;
-  lightboxImg.src = "";
-  document.body.style.overflow = "";
-}
-
-if (closeBtn) closeBtn.addEventListener("click", closeLightbox);
-if (lightbox) {
-  lightbox.addEventListener("click", (event) => {
-    if (event.target === lightbox) closeLightbox();
-  });
-}
-
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && lightbox && !lightbox.hidden) {
-    closeLightbox();
-  }
-});
+close?.addEventListener('click', () => { if (lightbox) lightbox.hidden = true; });
+lightbox?.addEventListener('click', (e) => { if (e.target === lightbox) lightbox.hidden = true; });
