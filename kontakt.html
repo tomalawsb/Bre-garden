@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kontakt — Breń Garden</title>
+  <meta name="description" content="Kontakt i rezerwacje Breń Garden: miejsce na dane właściciela, godziny otwarcia, telefon i formularz.">
+  <meta property="og:title" content="Kontakt — Breń Garden">
+  <meta property="og:description" content="Kontakt i rezerwacje Breń Garden: miejsce na dane właściciela, godziny otwarcia, telefon i formularz.">
+  <meta property="og:image" content="./assets/img/tipi-ogrod.jpg">
+  <link rel="icon" href="./assets/icons/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<header class="site-header" data-header>
+  <a class="brand" href="./index.html" aria-label="Breń Garden - strona główna">
+    <img src="./assets/icons/logo.svg" alt="" class="brand__mark">
+    <span><strong>Breń Garden</strong><small>ogród • natura • chwile</small></span>
+  </a>
+  <button class="nav-toggle" data-nav-toggle aria-label="Otwórz menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav class="main-nav" data-nav>
+    <a href="./ogrod.html">O ogrodzie</a>
+    <a href="./atrakcje.html">Atrakcje</a>
+    <a href="./sesje.html">Sesje</a>
+    <a href="./imprezy.html">Imprezy</a>
+    <a href="./galeria.html">Galeria</a>
+    <a href="./przewodnik-qr.html">Przewodnik QR</a>
+    <a class="nav-cta" href="./kontakt.html">Kontakt</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="page-hero page-hero--contact">
+  <div>
+    <p class="eyebrow">kontakt i rezerwacje</p>
+    <h1>Tu wpiszesz dane właściciela, godziny otwarcia i zasady rezerwacji.</h1>
+    <p class="lead">Ta podstrona jest przygotowana jako gotowy szablon. Wystarczy podmienić telefon, link do Facebooka, cennik i dokładny adres.</p>
+  </div>
+  <img src="./assets/img/bialy-most.jpg" alt="Biały most w Breń Garden">
+</section>
+
+<section class="section contact-layout">
+  <div class="contact-card reveal">
+    <h2>Breń Garden</h2>
+    <p><strong>Lokalizacja:</strong> Breń Osuchowski, okolice Mielca</p>
+    <p><strong>Telefon:</strong> do uzupełnienia</p>
+    <p><strong>Facebook:</strong> do uzupełnienia linkiem do profilu</p>
+    <p><strong>Godziny:</strong> najlepiej po wcześniejszym kontakcie / według sezonu</p>
+  </div>
+  <form class="contact-form reveal" onsubmit="return false;">
+    <h2>Formularz pokazowy</h2>
+    <p>Na GitHub Pages formularz nie wyśle wiadomości bez dodatkowej usługi. Można później podłączyć Formspree, Netlify Forms albo Firebase.</p>
+    <label>Imię<input type="text" placeholder="Twoje imię"></label>
+    <label>Telefon lub e-mail<input type="text" placeholder="Kontakt zwrotny"></label>
+    <label>Temat<select><option>Sesja zdjęciowa</option><option>Impreza okolicznościowa</option><option>Wejście rodzinne</option><option>Inne pytanie</option></select></label>
+    <label>Wiadomość<textarea placeholder="Napisz, czego dotyczy zapytanie"></textarea></label>
+    <button class="btn btn--primary" type="submit">Przycisk pokazowy</button>
+  </form>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div>
+      <img src="./assets/icons/logo.svg" alt="" class="footer__logo">
+      <h2>Breń Garden</h2>
+      <p>Rodzinny ogród plenerowy w Brniu Osuchowskim — miejsce spacerów, sesji zdjęciowych i kameralnych spotkań wśród zieleni.</p>
+    </div>
+    <div>
+      <h3>Strona</h3>
+      <a href="./ogrod.html">O ogrodzie</a>
+      <a href="./atrakcje.html">Atrakcje</a>
+      <a href="./sesje.html">Sesje zdjęciowe</a>
+      <a href="./przewodnik-qr.html">Przewodnik QR</a>
+    </div>
+    <div>
+      <h3>Do uzupełnienia</h3>
+      <p>Telefon, godziny otwarcia, dokładny adres, regulamin wejścia i link do Facebooka wpiszesz później w plikach HTML.</p>
+    </div>
+  </div>
+  <div class="footer__bottom">© Breń Garden. Statyczna strona gotowa pod GitHub Pages.</div>
+</footer>
+
+<script src="./js/app.js"></script>
+</body>
+</html>

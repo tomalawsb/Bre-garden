@@ -1,37 +1,37 @@
+
 const header = document.querySelector('[data-header]');
-const nav = document.querySelector('[data-nav]');
 const navToggle = document.querySelector('[data-nav-toggle]');
-if (header) {
-  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 30);
-  onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
-}
-if (navToggle && nav) {
-  navToggle.addEventListener('click', () => nav.classList.toggle('open'));
-  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
-}
-const gallery = document.querySelector('[data-gallery]');
-const lightbox = document.querySelector('[data-lightbox]');
-const lightboxImg = document.querySelector('[data-lightbox-img]');
-const lightboxCaption = document.querySelector('[data-lightbox-caption]');
-if (gallery && window.BREN_GALLERY) {
-  window.BREN_GALLERY.forEach((item, index) => {
-    const btn = document.createElement('button');
-    btn.className = 'gallery-item';
-    btn.type = 'button';
-    btn.innerHTML = `<img src="${item.thumb}" alt="${item.alt}" loading="lazy"><span>${item.alt}</span>`;
-    btn.addEventListener('click', () => {
-      if (!lightbox) return;
-      lightboxImg.src = item.src;
-      lightboxImg.alt = item.alt;
-      lightboxCaption.textContent = item.alt;
-      lightbox.showModal();
-    });
-    gallery.appendChild(btn);
+const nav = document.querySelector('[data-nav]');
+
+window.addEventListener('scroll', () => {
+  header?.classList.toggle('is-scrolled', window.scrollY > 12);
+});
+
+navToggle?.addEventListener('click', () => {
+  const open = nav?.classList.toggle('is-open');
+  navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+});
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('is-visible');
   });
-}
-document.querySelectorAll('[data-close]').forEach(btn => btn.addEventListener('click', () => btn.closest('dialog')?.close()));
-if (lightbox) lightbox.addEventListener('click', (e) => { if (e.target === lightbox) lightbox.close(); });
-document.querySelectorAll('[data-fake-audio]').forEach(btn => btn.addEventListener('click', () => {
-  btn.textContent = '✓ Tu będzie lektor AI MP3';
-  setTimeout(() => btn.textContent = '▶ Posłuchaj opisu', 2500);
-}));
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+const lightbox = document.querySelector('[data-lightbox]');
+const lightboxImg = lightbox?.querySelector('img');
+const close = document.querySelector('[data-lightbox-close]');
+
+document.querySelectorAll('.gallery-item img').forEach(img => {
+  img.parentElement.addEventListener('click', () => {
+    if (!lightbox || !lightboxImg) return;
+    lightboxImg.src = img.dataset.full || img.src;
+    lightboxImg.alt = img.alt || '';
+    lightbox.hidden = false;
+  });
+});
+
+close?.addEventListener('click', () => { if (lightbox) lightbox.hidden = true; });
+lightbox?.addEventListener('click', (e) => { if (e.target === lightbox) lightbox.hidden = true; });

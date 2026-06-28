@@ -1,31 +1,33 @@
-# publish_to_github.ps1
-# Uruchamiaj z głównego folderu strony, tam gdzie jest index.html.
-# Przed pierwszym użyciem ustaw poprawny adres repozytorium w zmiennej $RepoUrl.
+param(
+  [string]$RepoUrl = ""
+)
 
-$ErrorActionPreference = "Stop"
-
-$RepoUrl = "https://github.com/TWOJ_LOGIN/bren-garden.git"
+Write-Host "Breń Garden - publikacja statycznej strony na GitHub" -ForegroundColor Green
 
 if (-not (Test-Path "index.html")) {
-    throw "Brak index.html. Uruchom skrypt z głównego folderu strony."
-}
-
-if (-not (Get-Command git -ErrorAction SilentlyContinue)) {
-    throw "Nie znaleziono Git. Zainstaluj Git for Windows."
+  Write-Host "Uruchom skrypt w folderze, gdzie leży index.html" -ForegroundColor Red
+  exit 1
 }
 
 if (-not (Test-Path ".git")) {
-    git init
-    git branch -M main
+  git init
+  git branch -M main
 }
 
-$remote = git remote get-url origin 2>$null
-if (-not $remote) {
+if ($RepoUrl -ne "") {
+  $existing = git remote get-url origin 2>$null
+  if ($LASTEXITCODE -ne 0) {
     git remote add origin $RepoUrl
+  } else {
+    git remote set-url origin $RepoUrl
+  }
 }
 
- git add .
- git commit -m "Publikacja strony Breń Garden" 2>$null
- git push -u origin main
+git add .
+git commit -m "Publikacja strony Breń Garden" 2>$null
+if ($LASTEXITCODE -ne 0) {
+  Write-Host "Brak nowych zmian do commita albo commit już istnieje." -ForegroundColor Yellow
+}
 
-Write-Host "Gotowe. Teraz w GitHub ustaw Settings -> Pages -> main -> /root." -ForegroundColor Green
+git push -u origin main
+Write-Host "Gotowe. Teraz włącz GitHub Pages: Settings -> Pages -> main / root" -ForegroundColor Green
