@@ -4,96 +4,41 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Przewodnik QR — Breń Garden</title>
-  <meta name="description" content="Pomysł na aplikację PWA i przewodnik QR po Breń Garden: opisy roślin, ptaków, ciekawostki i lektor AI.">
-  <meta property="og:title" content="Przewodnik QR — Breń Garden">
-  <meta property="og:description" content="Pomysł na aplikację PWA i przewodnik QR po Breń Garden: opisy roślin, ptaków, ciekawostki i lektor AI.">
-  <meta property="og:image" content="./assets/img/tipi-ogrod.jpg">
-  <link rel="icon" href="./assets/icons/logo.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./css/style.css">
+  <meta name="description" content="Przykład karty QR z opisem rośliny lub ptaka w Breń Garden.">
+  <meta name="theme-color" content="#1a3320">
+  <link rel="canonical" href="https://bren-garden.github.io/przewodnik-qr.html">
+  <link rel="icon" href="assets/icons/leaf.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-
-<header class="site-header" data-header>
-  <a class="brand" href="./index.html" aria-label="Breń Garden - strona główna">
-    <img src="./assets/icons/logo.svg" alt="" class="brand__mark">
-    <span><strong>Breń Garden</strong><small>ogród • natura • chwile</small></span>
-  </a>
-  <button class="nav-toggle" data-nav-toggle aria-label="Otwórz menu" aria-expanded="false"><span></span><span></span><span></span></button>
-  <nav class="main-nav" data-nav>
-    <a href="./ogrod.html">O ogrodzie</a>
-    <a href="./atrakcje.html">Atrakcje</a>
-    <a href="./sesje.html">Sesje</a>
-    <a href="./imprezy.html">Imprezy</a>
-    <a href="./galeria.html">Galeria</a>
-    <a href="./przewodnik-qr.html">Przewodnik QR</a>
-    <a class="nav-cta" href="./kontakt.html">Kontakt</a>
-  </nav>
-</header>
-
-<main>
-
-<section class="page-hero">
-  <div>
-    <p class="eyebrow">nowoczesny pomysł</p>
-    <h1>Przewodnik QR: ogród, który opowiada o sobie głosem.</h1>
-    <p class="lead">Przy roślinie, ptaku, rzeźbie albo punkcie foto stoi tabliczka. Gość skanuje kod i dostaje opis, ciekawostkę, zdjęcia oraz lektora AI.</p>
-  </div>
-  <img src="./assets/img/zielony-ogrod.jpg" alt="Ogród z zielenią i krzewami">
-</section>
-
-<section class="section qr-demo">
-  <div class="phone reveal">
-    <div class="phone__top"></div>
-    <div class="phone__screen">
-      <img src="./assets/img/kwiaty-alejka-thumb.jpg" alt="Przykładowa karta QR">
-      <p class="tag">Punkt 12 • roślina ozdobna</p>
-      <h2>Rozplenica japońska</h2>
-      <p>Miękka, falująca trawa ozdobna, która pięknie pracuje na wietrze i tworzy naturalne tło do zdjęć.</p>
-      <button class="audio-btn">▶ Posłuchaj opisu</button>
-    </div>
-  </div>
-  <div class="qr-copy reveal">
-    <p class="eyebrow">jak to działa?</p>
-    <h2>Bez instalowania aplikacji. Wystarczy aparat w telefonie.</h2>
-    <ol class="steps">
-      <li><strong>Tabliczka QR</strong><span>Przy kuraku, bażancie, krzewie, trawie, rzeźbie lub miejscu foto.</span></li>
-      <li><strong>Karta punktu</strong><span>Zdjęcie, opis, ciekawostka, wersja dla dzieci i przycisk audio.</span></li>
-      <li><strong>Lektor AI</strong><span>Gotowy plik MP3, który odtwarza się szybko i nie generuje kosztów przy każdym wejściu.</span></li>
-      <li><strong>Trasy</strong><span>Rodzinna, fotograficzna, przyrodnicza i krótka trasa „najładniejsze miejsca”.</span></li>
-    </ol>
-  </div>
-</section>
-
-<section class="section cards cards--three">
-  <article class="info-card reveal"><h2>Dla dzieci</h2><p>Prosty opis, zagadka i ciekawostka: „znajdź ptaka z najdłuższym ogonem” albo „poszukaj trawy, która wygląda jak fontanna”.</p></article>
-  <article class="info-card reveal"><h2>Dla dorosłych</h2><p>Krótki, konkretny opis rośliny, pochodzenie, wymagania, termin kwitnienia, cechy ozdobne i ciekawostki.</p></article>
-  <article class="info-card reveal"><h2>Dla właściciela</h2><p>Panel do dodawania punktów, generowania QR, wrzucania zdjęć, audio i sprawdzania, które punkty są najczęściej skanowane.</p></article>
-</section>
-
-</main>
-
-<footer class="footer">
-  <div class="footer__inner">
-    <div>
-      <img src="./assets/icons/logo.svg" alt="" class="footer__logo">
-      <h2>Breń Garden</h2>
-      <p>Rodzinny ogród plenerowy w Brniu Osuchowskim — miejsce spacerów, sesji zdjęciowych i kameralnych spotkań wśród zieleni.</p>
-    </div>
-    <div>
-      <h3>Strona</h3>
-      <a href="./ogrod.html">O ogrodzie</a>
-      <a href="./atrakcje.html">Atrakcje</a>
-      <a href="./sesje.html">Sesje zdjęciowe</a>
-      <a href="./przewodnik-qr.html">Przewodnik QR</a>
-    </div>
-    <div>
-      <h3>Do uzupełnienia</h3>
-      <p>Telefon, godziny otwarcia, dokładny adres, regulamin wejścia i link do Facebooka wpiszesz później w plikach HTML.</p>
-    </div>
-  </div>
-  <div class="footer__bottom">© Breń Garden. Statyczna strona gotowa pod GitHub Pages.</div>
-</footer>
-
-<script src="./js/app.js"></script>
+<body class="guide-body">
+  <header class="site-header compact">
+    <a class="brand" href="index.html"><span class="brand-mark">BG</span><span><strong>Breń Garden</strong><small>przewodnik QR</small></span></a>
+    <nav class="main-nav always"><a href="index.html">Strona główna</a></nav>
+  </header>
+  <main class="guide-main wrap">
+    <section class="guide-card">
+      <img src="assets/img/kwiaty-rozowe.webp" width="1425" height="1900" alt="Kwiaty i rabata w Breń Garden" decoding="async">
+      <div class="guide-content">
+        <p class="section-kicker">Punkt demonstracyjny 07</p>
+        <h1>Rabata kwiatowa i ozdobne nasadzenia</h1>
+        <p class="lead">To przykładowa karta, która otworzy się po zeskanowaniu kodu QR przy roślinie, ptaku, rzeźbie albo miejscu fotograficznym.</p>
+        <div class="audio-demo">
+          <button type="button" data-fake-audio>▶ Posłuchaj opisu</button>
+          <span>Tu później podpinamy plik MP3 z lektorem AI.</span>
+        </div>
+        <h2>Opis dla odwiedzających</h2>
+        <p>Rabaty kwiatowe budują kolor, zapach i nastrój ogrodu. W takim miejscu można zatrzymać się na zdjęcie, poszukać owadów zapylających i zobaczyć, jak różne rośliny tworzą jedną kompozycję.</p>
+        <h2>Dla dzieci</h2>
+        <p>Popatrz na kolory kwiatów. Spróbuj znaleźć różowy, fioletowy, żółty i zielony. Każdy kolor może przyciągać inne owady.</p>
+        <h2>Ciekawostka</h2>
+        <p>Najlepsze karty QR warto robić krótkie: 30–60 sekund audio, jeden prosty opis i jedna ciekawostka. Gość ma słuchać w ogrodzie, nie czytać encyklopedię.</p>
+        <a class="btn secondary" href="index.html#qr">Wróć do strony</a>
+      </div>
+    </section>
+  </main>
+  <script src="js/app.js"></script>
 </body>
 </html>

@@ -1,36 +1,41 @@
-BREŃ GARDEN — LEPSZA STRONA STATYCZNA POD GITHUB PAGES
+BREŃ GARDEN — GOTOWA STRONA STATYCZNA
 
-Co jest w paczce:
-- index.html — strona główna
-- ogrod.html — opis ogrodu
-- atrakcje.html — atrakcje
-- sesje.html — oferta sesji zdjęciowych
-- imprezy.html — wydarzenia okolicznościowe
-- galeria.html — galeria z podglądem zdjęć
-- przewodnik-qr.html — koncepcja przewodnika QR
-- kontakt.html — kontakt i szablon formularza
-- css/style.css — wygląd strony
-- js/app.js — menu mobilne, animacje, galeria
-- assets/img — zdjęcia zoptymalizowane pod internet
-- .nojekyll — plik ważny pod GitHub Pages
+Zawartość paczki:
+- index.html — strona główna,
+- przewodnik-qr.html — przykładowa karta przewodnika QR,
+- css/style.css — wygląd strony,
+- js/app.js — menu mobilne i galeria,
+- assets/img — zdjęcia,
+- robots.txt i sitemap.xml — podstawowe pliki SEO,
+- publish_to_github.ps1 — skrypt wysyłania na GitHub.
 
-Jak wrzucić na GitHub Pages:
-1. Rozpakuj ZIP.
-2. W repozytorium GitHub wrzuć zawartość folderu, a nie folder jako podfolder.
-3. W głównym katalogu repo mają być od razu: index.html, ogrod.html, css, js, assets itd.
-4. Wejdź w Settings -> Pages.
-5. Source: Deploy from a branch.
-6. Branch: main, folder: /root.
-7. Po chwili GitHub pokaże link do strony.
+Jak opublikować na GitHub Pages:
+1. Rozpakuj ZIP do pustego folderu.
+2. Otwórz PowerShell w tym folderze.
+3. Uruchom:
+   ./publish_to_github.ps1
+4. W GitHub ustaw Pages: Deploy from branch -> main -> /root.
 
-Dlaczego nie WordPress:
-GitHub Pages nie uruchamia WordPressa, bo WordPress wymaga PHP i bazy danych. Ta strona jest statyczna: HTML/CSS/JS, czyli pasuje do GitHub Pages.
+Jeżeli Git pokaże brak remote origin:
+- otwórz publish_to_github.ps1,
+- w zmiennej $RepoUrl wpisz adres repozytorium,
+- uruchom skrypt ponownie.
 
-Co trzeba uzupełnić przed publikacją:
-- numer telefonu,
-- dokładny adres,
+Przed ostateczną publikacją warto uzupełnić:
+- numer telefonu, jeżeli właściciel chce go pokazać,
 - godziny otwarcia,
-- link do Facebooka,
-- cennik wejść/sesji/imprez,
-- regulamin wejścia i sesji zdjęciowych,
-- informację o RODO/zgodach, jeżeli będzie formularz kontaktowy.
+- cennik albo informację o wycenie indywidualnej,
+- dokładny adres/pinezka Google Maps,
+- finalny adres domeny w index.html, przewodnik-qr.html, robots.txt i sitemap.xml.
+
+W tej wersji poprawiono:
+- normalną typografię bez krzyczących wielkich liter,
+- nagłówki bez kropek na końcu,
+- mniejsze i czytelniejsze tytuły,
+- bardziej naturalne teksty sekcji,
+- pliki SEO: robots.txt, sitemap.xml, canonical i Open Graph,
+- obrazy z width/height oraz alt,
+- galerię widoczną w HTML,
+- przyciski type="button",
+- focus-visible i podstawową dostępność,
+- bezpieczniejszy publish_to_github.ps1.

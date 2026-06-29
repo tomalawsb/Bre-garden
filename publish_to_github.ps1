@@ -1,33 +1,59 @@
-param(
-  [string]$RepoUrl = ""
-)
+# publish_to_github.ps1
+# Uruchamiaj z glownego folderu strony, tam gdzie jest index.html.
+# Jezeli repo nie ma remote origin, wpisz adres w zmiennej RepoUrl.
 
-Write-Host "Breń Garden - publikacja statycznej strony na GitHub" -ForegroundColor Green
+$ErrorActionPreference = 'Stop'
 
-if (-not (Test-Path "index.html")) {
-  Write-Host "Uruchom skrypt w folderze, gdzie leży index.html" -ForegroundColor Red
-  exit 1
+$RepoUrl = ''
+
+function Run-Git {
+    param(
+        [Parameter(Mandatory = $true)]
+        [string[]]$ArgsList
+    )
+
+    & git @ArgsList
+    if ($LASTEXITCODE -ne 0) {
+        throw ('Blad Git: git ' + ($ArgsList -join ' '))
+    }
 }
 
-if (-not (Test-Path ".git")) {
-  git init
-  git branch -M main
+if (-not (Test-Path -LiteralPath 'index.html')) {
+    throw 'Brak index.html. Uruchom skrypt z glownego folderu strony.'
 }
 
-if ($RepoUrl -ne "") {
-  $existing = git remote get-url origin 2>$null
-  if ($LASTEXITCODE -ne 0) {
-    git remote add origin $RepoUrl
-  } else {
-    git remote set-url origin $RepoUrl
-  }
+if (-not (Get-Command git -ErrorAction SilentlyContinue)) {
+    throw 'Nie znaleziono Git. Zainstaluj Git for Windows.'
 }
 
-git add .
-git commit -m "Publikacja strony Breń Garden" 2>$null
-if ($LASTEXITCODE -ne 0) {
-  Write-Host "Brak nowych zmian do commita albo commit już istnieje." -ForegroundColor Yellow
+if (-not (Test-Path -LiteralPath '.git')) {
+    Run-Git @('init')
 }
 
-git push -u origin main
-Write-Host "Gotowe. Teraz włącz GitHub Pages: Settings -> Pages -> main / root" -ForegroundColor Green
+$remote = ''
+try {
+    $remote = (& git remote get-url origin 2>$null).Trim()
+} catch {
+    $remote = ''
+}
+
+if ([string]::IsNullOrWhiteSpace($remote)) {
+    if ([string]::IsNullOrWhiteSpace($RepoUrl)) {
+        throw 'Brak remote origin. Wpisz adres repozytorium w zmiennej RepoUrl albo uruchom: git remote add origin ADRES_REPO'
+    }
+    Run-Git @('remote', 'add', 'origin', $RepoUrl)
+}
+
+Run-Git @('branch', '-M', 'main')
+Run-Git @('add', '.')
+
+$changes = (& git status --porcelain)
+if (-not [string]::IsNullOrWhiteSpace($changes)) {
+    Run-Git @('commit', '-m', 'Publikacja strony Bren Garden')
+} else {
+    Write-Host 'Brak zmian do zapisania w commit.' -ForegroundColor Yellow
+}
+
+Run-Git @('push', '-u', 'origin', 'main')
+
+Write-Host 'Gotowe. Ustaw GitHub Pages: Settings -> Pages -> main -> root.' -ForegroundColor Green

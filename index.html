@@ -3,157 +3,457 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Breń Garden — ogród rodzinny, sesje zdjęciowe i kameralne imprezy</title>
-  <meta name="description" content="Breń Garden w Brniu Osuchowskim: ogród rodzinny, miejsce sesji zdjęciowych, spacerów i kameralnych imprez.">
-  <meta property="og:title" content="Breń Garden — ogród rodzinny, sesje zdjęciowe i kameralne imprezy">
-  <meta property="og:description" content="Breń Garden w Brniu Osuchowskim: ogród rodzinny, miejsce sesji zdjęciowych, spacerów i kameralnych imprez.">
-  <meta property="og:image" content="./assets/img/tipi-ogrod.jpg">
-  <link rel="icon" href="./assets/icons/logo.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./css/style.css">
+  <title>Breń Garden – ogród plenerowy, sesje zdjęciowe i spacery</title>
+  <meta name="description" content="Breń Garden w Brniu Osuchowskim — malowniczy ogród z alejkami, kwiatami, tipi, placem zabaw i ptactwem ozdobnym. Idealne miejsce na sesje zdjęciowe, spacery rodzinne i kameralne wydarzenia.">
+  <meta name="theme-color" content="#1a3320">
+  <link rel="canonical" href="https://bren-garden.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bren-garden.github.io/">
+  <meta property="og:title" content="Breń Garden – ogród plenerowy na Podkarpaciu">
+  <meta property="og:description" content="Alejki, mostki, kwiaty, tipi i zielone zakątki. Ogród jak z bajki, 20 minut od Mielca.">
+  <meta property="og:image" content="https://bren-garden.github.io/assets/img/og-cover.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/icons/leaf.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TouristAttraction",
+    "name": "Breń Garden",
+    "description": "Ogród plenerowy do spacerów, sesji zdjęciowych i kameralnych wydarzeń rodzinnych.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Breń Osuchowski",
+      "postalCode": "39-304",
+      "addressCountry": "PL"
+    },
+    "url": "https://bren-garden.github.io/",
+    "image": "https://bren-garden.github.io/assets/img/og-cover.webp",
+    "sameAs": ["https://www.facebook.com/p/Bre%C5%84-Garden-61556563711316/"]
+  }
+  </script>
 </head>
 <body>
 
-<header class="site-header" data-header>
-  <a class="brand" href="./index.html" aria-label="Breń Garden - strona główna">
-    <img src="./assets/icons/logo.svg" alt="" class="brand__mark">
-    <span><strong>Breń Garden</strong><small>ogród • natura • chwile</small></span>
-  </a>
-  <button class="nav-toggle" data-nav-toggle aria-label="Otwórz menu" aria-expanded="false"><span></span><span></span><span></span></button>
-  <nav class="main-nav" data-nav>
-    <a href="./ogrod.html">O ogrodzie</a>
-    <a href="./atrakcje.html">Atrakcje</a>
-    <a href="./sesje.html">Sesje</a>
-    <a href="./imprezy.html">Imprezy</a>
-    <a href="./galeria.html">Galeria</a>
-    <a href="./przewodnik-qr.html">Przewodnik QR</a>
-    <a class="nav-cta" href="./kontakt.html">Kontakt</a>
-  </nav>
-</header>
-
-<main>
-
-<section class="hero hero--home">
-  <div class="hero__media">
-    <img src="./assets/img/tipi-ogrod.jpg" alt="Kolorowe tipi i zieleń ogrodu Breń Garden">
-  </div>
-  <div class="hero__shade"></div>
-  <div class="hero__content reveal">
-    <p class="eyebrow">Breń Osuchowski • ogród rodzinny • plener zdjęciowy</p>
-    <h1>Ogród, w którym każda alejka ma swoją historię.</h1>
-    <p class="lead">Breń Garden to zielona przestrzeń pełna kwiatów, ozdobnych traw, ptactwa, mostków, ławeczek, tipi i zakątków przygotowanych pod rodzinny spacer, sesję zdjęciową albo kameralne spotkanie.</p>
-    <div class="hero__actions">
-      <a class="btn btn--primary" href="./sesje.html">Zobacz ofertę sesji</a>
-      <a class="btn btn--ghost" href="./atrakcje.html">Poznaj atrakcje</a>
+  <!-- ── Header ───────────────────────────────────────────────────── -->
+  <header class="site-header" data-header>
+    <div class="header-inner">
+      <a class="brand" href="#start" aria-label="Breń Garden — strona główna">
+        <div class="brand-mark">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C7 2 3 6 3 11c0 3.5 2 6.5 5 8l1-2c-2.3-1.2-3.8-3.5-3.8-6C5.2 7.1 8.2 4 12 4c3.8 0 6.8 3.1 6.8 7 0 2.5-1.5 4.8-3.8 6l1 2c3-1.5 5-4.5 5-8 0-5-4-9-9-9z"/>
+            <path d="M12 8c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4z"/>
+            <path d="M11 22h2v-4h-2z"/>
+          </svg>
+        </div>
+        <div>
+          <div class="brand-name">Breń Garden</div>
+          <div class="brand-sub">ogród plenerowy</div>
+        </div>
+      </a>
+      <button type="button" class="nav-toggle" data-nav-toggle aria-controls="menu-glowne" aria-expanded="false" aria-label="Otwórz menu">☰</button>
+      <nav class="main-nav" id="menu-glowne" data-nav>
+        <a href="#ogrod">O ogrodzie</a>
+        <a href="#atrakcje">Atrakcje</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#oferta">Oferta</a>
+        <a href="#qr">Przewodnik QR</a>
+        <a href="#kontakt" class="nav-cta">Zarezerwuj</a>
+      </nav>
     </div>
-  </div>
-</section>
+  </header>
 
-<section class="intro-grid section">
-  <article class="intro-card intro-card--large reveal">
-    <span>01</span>
-    <h2>Nie tylko ogród. Gotowa sceneria do wspomnień.</h2>
-    <p>Tu zdjęcie robi się samo: raz prowadzi kadr biała balustrada mostku, raz kolorowe tipi, raz miękka linia traw, a chwilę później alejka znika między drzewami. Breń Garden ma klimat miejsca, do którego nie wpada się „na pięć minut” — tu naturalnie zwalnia się krok.</p>
-  </article>
-  <article class="intro-card reveal">
-    <span>02</span>
-    <h3>Dla rodzin</h3>
-    <p>Przestrzeń do spokojnego spaceru, zabawy dzieci, odpoczynku na ławce i odkrywania ogrodu bez pośpiechu.</p>
-  </article>
-  <article class="intro-card reveal">
-    <span>03</span>
-    <h3>Dla fotografów</h3>
-    <p>Gotowe plany zdjęciowe: mostki, zieleń, kwiaty, tipi, naturalne tło i miejsca z różnym charakterem.</p>
-  </article>
-</section>
+  <!-- ── Hero ─────────────────────────────────────────────────────── -->
+  <section class="hero" id="start" data-hero>
+    <picture>
+      <source media="(max-width: 700px)" srcset="assets/img/mobile-hero.webp">
+      <img src="assets/img/hero.webp" width="2200" height="1250" alt="Zielone alejki i namioty tipi w Breń Garden" class="hero-bg" fetchpriority="high" decoding="async">
+    </picture>
+    <div class="hero-gradient"></div>
 
-<section class="section split">
-  <div class="split__image reveal"><img src="./assets/img/mostek-alejka.jpg" alt="Drewniany mostek i alejka w Breń Garden"></div>
-  <div class="split__text reveal">
-    <p class="eyebrow">spacer • zieleń • odpoczynek</p>
-    <h2>Ogród stworzony do chodzenia, patrzenia i zatrzymywania się.</h2>
-    <p>W Breń Garden najważniejsza jest atmosfera. Alejki prowadzą przez rośliny, kępy traw, krzewy i drzewa. Po drodze pojawiają się mostki, ławeczki, dekoracje i punkty, przy których aż chce się wyjąć telefon albo aparat.</p>
-    <ul class="check-list">
-      <li>różnorodne rośliny, trawy ozdobne, kwiaty i krzewy,</li>
-      <li>zakątki do sesji rodzinnych, komunijnych, ślubnych i dziecięcych,</li>
-      <li>ptactwo ozdobne i naturalny klimat małej przyrodniczej ścieżki,</li>
-      <li>miejsce na kameralne urodziny, piknik lub spotkanie okolicznościowe.</li>
-    </ul>
-  </div>
-</section>
-
-<section class="section feature-band">
-  <div class="section-heading reveal">
-    <p class="eyebrow">co można tu robić?</p>
-    <h2>Jedno miejsce, kilka powodów do przyjazdu.</h2>
-  </div>
-  <div class="cards cards--four">
-    <a class="feature-card reveal" href="./sesje.html">
-      <img src="./assets/img/kwiaty-alejka-thumb.jpg" alt="Kwiaty w ogrodzie">
-      <h3>Sesje zdjęciowe</h3>
-      <p>Rodzinne, komunijne, ciążowe, ślubne i dziecięce — w naturalnym plenerze bez sztucznej scenografii.</p>
-    </a>
-    <a class="feature-card reveal" href="./atrakcje.html">
-      <img src="./assets/img/gokarty-domki-thumb.jpg" alt="Gokarty i domki dla dzieci">
-      <h3>Rodzinny czas</h3>
-      <p>Dzieci mają co odkrywać, a dorośli mają gdzie odpocząć. To ogród na spokojny weekend, nie na pośpiech.</p>
-    </a>
-    <a class="feature-card reveal" href="./imprezy.html">
-      <img src="./assets/img/bialy-most-thumb.jpg" alt="Biały most w ogrodzie">
-      <h3>Kameralne imprezy</h3>
-      <p>Urodziny, małe spotkania, pikniki, plenerowe przyjęcia i wydarzenia w zielonej scenerii.</p>
-    </a>
-    <a class="feature-card reveal" href="./przewodnik-qr.html">
-      <img src="./assets/img/zielony-ogrod-thumb.jpg" alt="Zielony ogród z krzewami i drzewami">
-      <h3>Przewodnik QR</h3>
-      <p>Pomysł na nowoczesną ścieżkę: skanujesz kod przy roślinie lub ptaku i słuchasz historii.</p>
-    </a>
-  </div>
-</section>
-
-<section class="quote-section">
-  <div class="quote-card reveal">
-    <p>„Najlepsze miejsca na zdjęcia nie krzyczą. One po prostu mają światło, fakturę, kolor i spokój. Breń Garden ma właśnie ten rodzaj uroku.”</p>
-  </div>
-</section>
-
-<section class="section gallery-strip">
-  <img class="reveal" src="./assets/img/plac-zabaw-tipi-thumb.jpg" alt="Plac zabaw i tipi">
-  <img class="reveal" src="./assets/img/plac-zabaw-linowy-thumb.jpg" alt="Drewniana konstrukcja zabawowa">
-  <img class="reveal" src="./assets/img/bialy-most-thumb.jpg" alt="Biały most">
-  <img class="reveal" src="./assets/img/kwiaty-alejka-thumb.jpg" alt="Kwiaty przy alejce">
-</section>
-
-<section class="section cta-panel reveal">
-  <p class="eyebrow">gotowe pod reklamę i rozwój</p>
-  <h2>Strona może działać z GitHub Pages, a później dostać przewodnik QR, rezerwacje i panel administratora.</h2>
-  <p>Na start to statyczna strona: szybka, prosta do opublikowania i bez WordPressa. Gdy ogród ruszy komercyjnie, można dołożyć Firebase, kody QR, opisy audio i formularze rezerwacji.</p>
-  <a class="btn btn--primary" href="./kontakt.html">Przejdź do kontaktu</a>
-</section>
-
-</main>
-
-<footer class="footer">
-  <div class="footer__inner">
-    <div>
-      <img src="./assets/icons/logo.svg" alt="" class="footer__logo">
-      <h2>Breń Garden</h2>
-      <p>Rodzinny ogród plenerowy w Brniu Osuchowskim — miejsce spacerów, sesji zdjęciowych i kameralnych spotkań wśród zieleni.</p>
+    <div class="hero-content wrap">
+      <p class="eyebrow">Breń Osuchowski · gmina Czermin · Podkarpacie</p>
+      <h1 class="display">Breń Garden</h1>
+      <p class="lead">
+        Ogród plenerowy w Brniu Osuchowskim na sesje zdjęciowe, rodzinne spacery i kameralne spotkania. Zielone alejki, mostki, kwiaty, tipi i atrakcje dla dzieci tworzą spokojne miejsce z naturalnym charakterem.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="#kontakt">Zapytaj o termin</a>
+        <a class="btn btn-outline" href="#galeria">Zobacz ogród</a>
+      </div>
     </div>
-    <div>
-      <h3>Strona</h3>
-      <a href="./ogrod.html">O ogrodzie</a>
-      <a href="./atrakcje.html">Atrakcje</a>
-      <a href="./sesje.html">Sesje zdjęciowe</a>
-      <a href="./przewodnik-qr.html">Przewodnik QR</a>
-    </div>
-    <div>
-      <h3>Do uzupełnienia</h3>
-      <p>Telefon, godziny otwarcia, dokładny adres, regulamin wejścia i link do Facebooka wpiszesz później w plikach HTML.</p>
-    </div>
-  </div>
-  <div class="footer__bottom">© Breń Garden. Statyczna strona gotowa pod GitHub Pages.</div>
-</footer>
 
-<script src="./js/app.js"></script>
+    <div class="hero-badges wrap">
+      <div class="hero-badge">
+        <span class="badge-icon">📷</span>
+        <div>
+          <div class="badge-label">Idealne na sesje</div>
+          <div class="badge-sub">rodzinne, komunijne, pary</div>
+        </div>
+      </div>
+      <div class="hero-badge">
+        <span class="badge-icon">🌿</span>
+        <div>
+          <div class="badge-label">Piękna przyroda</div>
+          <div class="badge-sub">kwiaty, trawy, ptactwo</div>
+        </div>
+      </div>
+      <div class="hero-badge">
+        <span class="badge-icon">👨‍👩‍👧‍👦</span>
+        <div>
+          <div class="badge-label">Dla rodzin</div>
+          <div class="badge-sub">plac zabaw, tipi, gokarty</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-hint" aria-hidden="true">Odkryj ogród</div>
+  </section>
+
+  <!-- ── About ─────────────────────────────────────────────────────── -->
+  <section class="section-about" id="ogrod">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="eyebrow">O ogrodzie</p>
+          <h2 class="display">Naturalne miejsce z charakterem</h2>
+          <p>
+            Breń Garden to prywatny ogród plenerowy stworzony z pasji do roślin, natury i rodzinnych chwil. Alejki wyłożone drewnianymi pomostami wiją się między starannie dobranymi nasadzeniami — trawami ozdobnymi, różami, bylinami i krzewami kwitnącymi przez cały sezon.
+          </p>
+          <p>
+            Na terenie ogrodu znajdziecie białe mostki nad strumieniami, namioty tipi dla dzieci, strefę gokarów, linowy plac zabaw, ławeczki w zielonych zakątkach i ptactwo ozdobne, które można obserwować z bliska. To przestrzeń, która zachwyca zarówno fotografów, jak i rodziny szukające chwili wytchnienia.
+          </p>
+          <p>
+            Ogród położony jest w spokojnej wsi Breń Osuchowski w gminie Czermin, zaledwie 20 minut od Mielca. Z dala od ruchliwych dróg, w otoczeniu podkarpackiej przyrody.
+          </p>
+          <a class="btn btn-ghost" href="#galeria">Zobacz zdjęcia z ogrodu →</a>
+        </div>
+        <div class="about-image-stack">
+          <div class="about-img-main">
+            <img src="assets/img/bialy-most-ogrod.webp" width="1900" height="1425" alt="Biały mostek i alejka w Breń Garden" loading="lazy" decoding="async">
+          </div>
+          <div class="about-img-accent">
+            <img src="assets/img/kwiaty-rozowe.webp" width="1425" height="1900" alt="Kolorowe kwiaty w ogrodzie" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+
+      <div class="about-stat-strip">
+        <div class="stat-item">
+          <span class="stat-num">4</span>
+          <span class="stat-label">strefy ogrodu</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">∞</span>
+          <span class="stat-label">pięknych kadrów</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">1</span>
+          <span class="stat-label">wyjątkowe miejsce</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Experience (dark) ─────────────────────────────────────────── -->
+  <section class="section-experience" id="atrakcje">
+    <div class="wrap">
+      <div class="exp-header">
+        <div>
+          <p class="eyebrow">Co tu można robić</p>
+          <h2 class="display">Co znajdziesz w ogrodzie</h2>
+        </div>
+        <p>Breń Garden łączy plener fotograficzny, spokojny ogród i rodzinne atrakcje. Dzięki temu sprawdzi się zarówno na krótką wizytę, jak i na zaplanowaną sesję zdjęciową.</p>
+      </div>
+
+      <div class="exp-cards">
+        <article class="exp-card">
+          <span class="exp-icon">📷</span>
+          <h3>Sesje zdjęciowe</h3>
+          <p>Rodzinne, komunijne, narzeczeńskie, ciążowe, dziecięce i produktowe. Ogród oferuje dziesiątki tła: kwiaty, drewniane mostki, zielone alejki, namioty tipi i trawy ozdobne. Każda pora dnia daje inne światło i inny nastrój.</p>
+        </article>
+        <article class="exp-card">
+          <span class="exp-icon">🎈</span>
+          <h3>Urodziny i spotkania</h3>
+          <p>Kameralne urodziny dla dzieci z tipi, małe przyjęcia rodzinne, pikniki na trawie. Ogród staje się scenografią dla chwil, które zostają na zdjęciach na zawsze — bez miejskiego hałasu i tłumów.</p>
+        </article>
+        <article class="exp-card">
+          <span class="exp-icon">🌿</span>
+          <h3>Spacery i edukacja</h3>
+          <p>Rośliny ozdobne, trawy, krzewy i ptactwo można odkrywać ze specjalnym przewodnikiem QR — skanując tabliczkę przy każdym gatunku, dostaje się opis, ciekawostkę i nagranie lektora.</p>
+        </article>
+        <article class="exp-card">
+          <span class="exp-icon">🏎️</span>
+          <h3>Gokarty i plac zabaw</h3>
+          <p>Dla najmłodszych gości ogród przygotował strefę aktywną: gokarty, linowy plac zabaw, zjeżdżalnie i huśtawki. Dzieci mogą spędzić tu kilka godzin — a rodzice spokojnie odpoczywają obok.</p>
+        </article>
+        <article class="exp-card">
+          <span class="exp-icon">🦚</span>
+          <h3>Ptactwo ozdobne</h3>
+          <p>Na terenie ogrodu żyją ozdobne ptaki, które można obserwować z bliska. To wyjątkowa atrakcja dla dzieci i dorosłych — rzadka okazja do kontaktu z pięknem przyrody bez wyjazdu do zoo.</p>
+        </article>
+        <article class="exp-card">
+          <span class="exp-icon">🌸</span>
+          <h3>Rośliny przez cały sezon</h3>
+          <p>Od wiosny do jesieni ogród zmienia kolory — tulipany i azalie, potem letnie byliny i trawy, a jesienią płomienne barwy liści i traw. Każda wizyta wygląda inaczej. To ogród zaprojektowany na cały rok.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Gallery ───────────────────────────────────────────────────── -->
+  <section class="section-gallery" id="galeria">
+    <div class="wrap">
+      <div class="gallery-header">
+        <div>
+          <p class="eyebrow">Galeria</p>
+          <h2 class="display">Zdjęcia z ogrodu</h2>
+        </div>
+        <p>Kliknij dowolne zdjęcie, by otworzyć w pełnym widoku.</p>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="gallery-grid" data-gallery>
+        <div class="g-item">
+          <button type="button" class="gallery-item" data-idx="0" aria-label="Powiększ: Tipi i zielony ogród Breń Garden">
+            <img src="assets/img/tipi-ogrod-thumb.webp" width="640" height="460" alt="Tipi i zielony ogród Breń Garden" loading="lazy" decoding="async">
+            <div class="gallery-item-overlay"><span>Tipi i zielony ogród Breń Garden</span></div>
+          </button>
+        </div>
+        <div class="g-item">
+          <button type="button" class="gallery-item" data-idx="1" aria-label="Powiększ: Plac zabaw, huśtawki i namioty tipi">
+            <img src="assets/img/plac-zabaw-tipi-thumb.webp" width="640" height="460" alt="Plac zabaw, huśtawki i namioty tipi" loading="lazy" decoding="async">
+            <div class="gallery-item-overlay"><span>Plac zabaw, huśtawki i namioty tipi</span></div>
+          </button>
+        </div>
+        <div class="g-item">
+          <button type="button" class="gallery-item" data-idx="2" aria-label="Powiększ: Gokarty dla dzieci i domki ogrodowe">
+            <img src="assets/img/gokarty-domki-thumb.webp" width="640" height="460" alt="Gokarty dla dzieci i domki ogrodowe" loading="lazy" decoding="async">
+            <div class="gallery-item-overlay"><span>Gokarty dla dzieci i domki ogrodowe</span></div>
+          </button>
+        </div>
+        <div class="g-item">
+          <button type="button" class="gallery-item" data-idx="3" aria-label="Powiększ: Mostek i alejka spacerowa">
+            <img src="assets/img/mostek-alejka-thumb.webp" width="640" height="460" alt="Mostek i alejka spacerowa" loading="lazy" decoding="async">
+            <div class="gallery-item-overlay"><span>Mostek i alejka spacerowa</span></div>
+          </button>
+        </div>
+        <div class="g-item">
+          <button type="button" class="gallery-item" data-idx="4" aria-label="Powiększ: Biały mostek i ozdobne nasadzenia">
+            <img src="assets/img/bialy-most-ogrod-thumb.webp" width="640" height="460" alt="Biały mostek i ozdobne nasadzenia" loading="lazy" decoding="async">
+            <div class="gallery-item-overlay"><span>Biały mostek i ozdobne nasadzenia</span></div>
+          </button>
+        </div>
+        <div class="g-item">
+          <button type="button" class="gallery-item" data-idx="5" aria-label="Powiększ: Kolorowe kwiaty w ogrodzie">
+            <img src="assets/img/kwiaty-rozowe-thumb.webp" width="640" height="460" alt="Kolorowe kwiaty w ogrodzie" loading="lazy" decoding="async">
+            <div class="gallery-item-overlay"><span>Kolorowe kwiaty w ogrodzie</span></div>
+          </button>
+        </div>
+        <div class="g-item">
+          <button type="button" class="gallery-item" data-idx="6" aria-label="Powiększ: Drewniany plac zabaw i trasa linowa">
+            <img src="assets/img/plac-zabaw-linowy-thumb.webp" width="640" height="460" alt="Drewniany plac zabaw i trasa linowa" loading="lazy" decoding="async">
+            <div class="gallery-item-overlay"><span>Drewniany plac zabaw i trasa linowa</span></div>
+          </button>
+        </div>
+        <div class="g-item">
+          <button type="button" class="gallery-item" data-idx="7" aria-label="Powiększ: Zielone alejki i kompozycje roślinne">
+            <img src="assets/img/zielone-alejki-thumb.webp" width="640" height="460" alt="Zielone alejki i kompozycje roślinne" loading="lazy" decoding="async">
+            <div class="gallery-item-overlay"><span>Zielone alejki i kompozycje roślinne</span></div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Offer / Pricing ───────────────────────────────────────────── -->
+  <section class="section-offer" id="oferta">
+    <div class="wrap">
+      <div class="offer-header">
+        <p class="eyebrow">Oferta</p>
+        <h2 class="display">Jak można skorzystać z ogrodu</h2>
+        <p class="lead">Trzy proste propozycje: spacer, sesja zdjęciowa albo małe wydarzenie w plenerze.</p>
+      </div>
+
+      <div class="pricing-cards">
+        <article class="pricing-card">
+          <div class="card-icon">🌿</div>
+          <h3>Spacer rodzinny</h3>
+          <p>Wejście do ogrodu, swobodny spacer alejkami, plac zabaw dla dzieci, miejsca odpoczynku i opcjonalna trasa z przewodnikiem QR. Idealne na popołudnie dla całej rodziny.</p>
+          <ul class="pricing-features">
+            <li>Wstęp do wszystkich stref ogrodu</li>
+            <li>Plac zabaw i gokarty</li>
+            <li>Możliwość trasy QR po roślinach</li>
+            <li>Weekendy i wybrane dni powszednie</li>
+          </ul>
+          <a class="btn" href="#kontakt">Zapytaj o termin</a>
+        </article>
+
+        <article class="pricing-card featured">
+          <div class="card-icon">📷</div>
+          <h3>Sesja zdjęciowa</h3>
+          <p>Rezerwacja ogrodu lub wybranej jego części dla fotografa i rodziny, pary, grupy lub malucha. Spokojny czas na piękne kadry bez przypadkowych przechodniów w tle.</p>
+          <ul class="pricing-features">
+            <li>Wybrane punkty fotograficzne</li>
+            <li>Rezerwacja konkretnej godziny</li>
+            <li>Możliwość wyłączności na strefę</li>
+            <li>Doradztwo w wyborze plenerów</li>
+          </ul>
+          <a class="btn btn-gold" href="#kontakt">Zarezerwuj sesję</a>
+        </article>
+
+        <article class="pricing-card">
+          <div class="card-icon">🎈</div>
+          <h3>Małe wydarzenie</h3>
+          <p>Kameralne urodziny dziecka, piknik rodzinny, spotkanie bliskich albo plenerowa niespodzianka. Ogród jako scenografia dla chwil, których nie zapomnisz.</p>
+          <ul class="pricing-features">
+            <li>Cały ogród jako dekoracja</li>
+            <li>Strefy odpoczynku i zabawy</li>
+            <li>Indywidualne ustalenia terminu</li>
+            <li>Możliwość ozdobienia przestrzeni</li>
+          </ul>
+          <a class="btn" href="#kontakt">Zapytaj o dostępność</a>
+        </article>
+      </div>
+
+      <p class="offer-note">Ceny i szczegółowe godziny otwarcia — zapytaj przez Facebooka lub telefonicznie.</p>
+    </div>
+  </section>
+
+  <!-- ── QR Guide ──────────────────────────────────────────────────── -->
+  <section class="section-qr" id="qr">
+    <div class="wrap">
+      <div class="qr-inner">
+        <div class="qr-content">
+          <p class="eyebrow">Przewodnik QR</p>
+          <h2 class="display">Przewodnik QR w ogrodzie</h2>
+          <p>
+            Przy każdej roślinie, przy każdym ciekawym zakątku i przy ptactwie ozdobnym stoi tabliczka z kodem QR. Wystarczy zeskanować telefonem — i dostaje się opis, ciekawostkę historyczną, wysokiej jakości zdjęcie oraz nagranie lektora AI.
+          </p>
+          <p>
+            Dzieci uczą się nazw roślin i zachowań zwierząt. Dorośli odkrywają, skąd pochodzi każda roślina i dlaczego trafiła właśnie tu. Spacer zamienia się w interaktywną wycieczkę przyrodniczą.
+          </p>
+          <a class="btn btn-ghost" href="przewodnik-qr.html">Zobacz przykładową kartę przewodnika →</a>
+        </div>
+        <div class="qr-visual">
+          <div class="phone-wrap">
+            <div class="phone-notch"></div>
+            <img src="assets/img/kwiaty-rozowe.webp" width="1425" height="1900" alt="Kwiaty w Breń Garden" loading="lazy" decoding="async">
+            <div class="phone-info">
+              <small>Punkt 07 · Rabata kwiatowa</small>
+              <strong>Azalie i różaneczniki</strong>
+              <button type="button" class="phone-play">▶ Posłuchaj opisu</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact ───────────────────────────────────────────────────── -->
+  <section class="section-contact" id="kontakt">
+    <div class="wrap">
+      <div class="contact-inner">
+        <div class="contact-text">
+          <p class="eyebrow">Kontakt i rezerwacje</p>
+          <h2 class="display">Zapytaj o wizytę lub rezerwację</h2>
+          <p>
+            Najprościej napisać do nas przez Facebooka lub zadzwonić. Odpowiemy na wszelkie pytania o terminy, zasady zwiedzania, możliwości rezerwacji i ceny. Zapraszamy przez cały sezon — od wiosny do jesieni.
+          </p>
+          <a class="btn btn-gold" href="https://www.facebook.com/p/Bre%C5%84-Garden-61556563711316/" target="_blank" rel="noopener">
+            Napisz na Facebooku →
+          </a>
+        </div>
+        <div class="contact-card">
+          <h3>Breń Garden</h3>
+          <div class="contact-row">
+            <div class="contact-row-icon">📍</div>
+            <div>
+              <div class="contact-row-label">Adres</div>
+              <div class="contact-row-value">Breń Osuchowski<br>39-304 Czermin, Podkarpacie</div>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-row-icon">📱</div>
+            <div>
+              <div class="contact-row-label">Kontakt</div>
+              <div class="contact-row-value">Messenger / Facebook</div>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-row-icon">💬</div>
+            <div>
+              <div class="contact-row-label">Facebook / Messenger</div>
+              <div class="contact-row-value">Breń Garden</div>
+            </div>
+          </div>
+          <a class="btn btn-gold" style="width:100%;justify-content:center;margin-top:8px" href="https://www.facebook.com/p/Bre%C5%84-Garden-61556563711316/" target="_blank" rel="noopener">
+            Otwórz profil Facebook
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ───────────────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-name">Breń Garden</div>
+          <p>Ogród plenerowy w Brniu Osuchowskim — piękne miejsce na sesje zdjęciowe, rodzinne spacery i kameralne wydarzenia. Zapraszamy przez cały sezon.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Nawigacja</h4>
+          <a href="#ogrod">O ogrodzie</a>
+          <a href="#atrakcje">Atrakcje</a>
+          <a href="#galeria">Galeria</a>
+          <a href="#oferta">Oferta</a>
+          <a href="#qr">Przewodnik QR</a>
+        </div>
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <a href="https://www.facebook.com/p/Bre%C5%84-Garden-61556563711316/" target="_blank" rel="noopener">Facebook / Messenger</a>
+          <a href="#kontakt">Rezerwacje</a>
+          <span style="opacity:.5;font-size:.85rem;padding:5px 0;display:block">Breń Osuchowski, 39-304 Czermin</span>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Breń Garden · Wszystkie prawa zastrzeżone</span>
+        <a href="przewodnik-qr.html">Przewodnik QR</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Lightbox ──────────────────────────────────────────────────── -->
+  <dialog class="lightbox" data-lightbox>
+    <button type="button" data-close aria-label="Zamknij">×</button>
+    <img data-lightbox-img alt="">
+    <p data-lightbox-caption></p>
+  </dialog>
+
+  <!-- ── Gallery data & scripts ───────────────────────────────────── -->
+  <script>
+  window.BREN_GALLERY = [
+    { src:'assets/img/tipi-ogrod.webp',       thumb:'assets/img/tipi-ogrod-thumb.webp',       alt:'Tipi i zielony ogród Breń Garden' },
+    { src:'assets/img/plac-zabaw-tipi.webp',  thumb:'assets/img/plac-zabaw-tipi-thumb.webp',  alt:'Plac zabaw, huśtawki i namioty tipi' },
+    { src:'assets/img/gokarty-domki.webp',    thumb:'assets/img/gokarty-domki-thumb.webp',    alt:'Gokarty dla dzieci i domki ogrodowe' },
+    { src:'assets/img/mostek-alejka.webp',    thumb:'assets/img/mostek-alejka-thumb.webp',    alt:'Mostek i alejka spacerowa' },
+    { src:'assets/img/bialy-most-ogrod.webp', thumb:'assets/img/bialy-most-ogrod-thumb.webp', alt:'Biały mostek i ozdobne nasadzenia' },
+    { src:'assets/img/kwiaty-rozowe.webp',    thumb:'assets/img/kwiaty-rozowe-thumb.webp',    alt:'Kolorowe kwiaty w ogrodzie' },
+    { src:'assets/img/plac-zabaw-linowy.webp',thumb:'assets/img/plac-zabaw-linowy-thumb.webp',alt:'Drewniany plac zabaw i trasa linowa' },
+    { src:'assets/img/zielone-alejki.webp',   thumb:'assets/img/zielone-alejki-thumb.webp',   alt:'Zielone alejki i kompozycje roślinne' }
+  ];
+  </script>
+  <script src="js/app.js"></script>
+  <script>
+  // Hero parallax on load
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => document.querySelector('.hero')?.classList.add('loaded'), 50);
+  });
+  </script>
 </body>
 </html>
